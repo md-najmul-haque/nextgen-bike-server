@@ -33,7 +33,7 @@ async function run() {
             res.send(product);
         });
 
-        //api for delivered button
+        //api for delivered and update button for updating quantity purpose.
         app.put("/inventory/:id", async (req, res) => {
             const id = req.params.id;
             const updatedStock = req.body;
