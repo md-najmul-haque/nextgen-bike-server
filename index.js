@@ -48,6 +48,15 @@ async function run() {
             const result = await productCollection.updateOne(filter, updateDoc, options);
             res.send(result);
         });
+
+        // insert API for add new item     
+        app.post('/inventory', async (req, res) => {
+            const newInventory = req.body;
+            const result = await productCollection.insertOne(newInventory);
+            res.send(result);
+        })
+
+
     }
     finally {
 
@@ -55,8 +64,6 @@ async function run() {
 
 }
 run().catch(console.dir);
-
-
 
 app.get('/', (req, res) => {
     res.send('Bicycle warehouse is running')
