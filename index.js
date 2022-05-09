@@ -16,15 +16,16 @@ async function run() {
     try {
         await client.connect();
         const productCollection = client.db("bicycleWarehouse").collection("product");
-        const query = {};
 
-        const cursor = productCollection.find(query);
-        const result = await cursor.toArray()
-
-        app.get('/inventory', (req, res) => {
+        // Load all Product
+        app.get('/inventory', async (req, res) => {
+            const query = {};
+            const cursor = productCollection.find(query);
+            const result = await cursor.toArray()
             res.send(result);
         });
 
+        //Load single product data
         app.get('/inventory/:id', async (req, res) => {
             const id = req.params.id
             const query = { _id: ObjectId(id) }
@@ -32,6 +33,21 @@ async function run() {
             res.send(product);
         });
 
+        //api for delivered button
+        app.put("/inventory/:id", async (req, res) => {
+            const id = req.params.id;
+            const updatedStock = req.body;
+            const filter = { _id: ObjectId(id) };
+            const options = { upsert: true };
+
+            const updateDoc = {
+                $set: {
+                    quantity: updatedStock.quantity,
+                },
+            };
+            const result = await productCollection.updateOne(filter, updateDoc, options);
+            res.send(result);
+        });
     }
     finally {
 
