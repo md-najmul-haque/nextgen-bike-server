@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "itracker-server",
+    "name": "bicycle-warehouse-server",
     "builds": [
         {
             "src": "index.js",
