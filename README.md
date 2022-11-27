@@ -1,5 +1,5 @@
 # NextGen Bike Server
-This is mainly the server repository of NextGen Bike(warehouse management website).
+This is mainly the server repository of [NextGen Bike](https://bicycle-warehouse-manage-1a130.web.app).
 
 
 ## NextGen Bike
