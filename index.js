@@ -85,7 +85,10 @@ async function run() {
 run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('Bicycle warehouse is running')
+    res.status(200).json({
+        "success": true,
+        "message": "NextGen Bike sever is running."
+    })
 });
 
 app.listen(port, () => {
