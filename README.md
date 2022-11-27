@@ -1,9 +1,18 @@
-# [NextGen Bike](hhttps://bicycle-warehouse-manage-1a130.web.app)
+# NextGen Bike Server
+This is mainly the server repository of NextGen Bike(warehouse management website).
 
-## Live Website Link [https://bicycle-warehouse-manage-1a130.web.app](https://bicycle-warehouse-manage-1a130.web.app)
 
-### Website's features and functionalities
-- NextGen Bike is mainly warehouse management website
+## NextGen Bike
+NextGen Bike is mainly warehouse management website.
+
+## Live Website Link
+[https://bicycle-warehouse-manage-1a130.web.app](https://bicycle-warehouse-manage-1a130.web.app)
+
+
+## Live Server Link
+[https://nextgen-bike-server.onrender.com](https://nextgen-bike-server.onrender.com)
+
+## Website's features and functionalities
 - You can do inventory of your product
 - You can add any new product by using add new item button and it will display on website.
 - You can manage your product. If you want you can delete also.
